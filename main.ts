@@ -23,9 +23,9 @@ function main(): void {
     throw new Error("Entry must not be only white space.");
   }
 
-  // The harness runs the program with /output as the working output dir;
-  // OUTPUT_DIR may override it, otherwise write next to the repo root.
-  const outDir = process.env.OUTPUT_DIR ?? "output";
+  // The harness runs the program in the sandbox with MAKEFUN_OUTPUT_DIR
+  // set to /output; respect that, otherwise write next to the repo root.
+  const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "output";
   mkdirSync(outDir, { recursive: true });
   const outPath = join(outDir, "entry.txt");
   writeFileSync(outPath, ENTRY + "\n", "utf8");

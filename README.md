@@ -16,7 +16,7 @@ A one-line museum placard for an ordinary office stapler, written as if it were 
 
 ## How it works
 
-`main.ts` (Node.js standard library only, no dependencies) writes that single line to `output/entry.txt` (or `$OUTPUT_DIR/entry.txt` when set), validating the gate first: 1–180 characters counted per code point, a single line, not only white space.
+`main.ts` (Node.js standard library only, no dependencies) writes that single line to `output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt` when set), validating the gate first: 1–180 characters counted per code point, a single line, not only white space.
 
 ## Run it
 
